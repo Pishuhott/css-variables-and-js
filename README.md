@@ -5,4 +5,4 @@
 
 **Description**
 
-A photo editor that allows you to add a photo frame and make blurring. When you change the color of the frame, the color of the text in the title changes with the help of CSS variables.
+A photo editor that allows you to apply different display styles to your pictures.
