@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --base:#87ceeb;
+    --spasing: 30vw;
+    --rotate: 0deg;
+    --blur: 0px;
+    --invert: 0%;
+    --sepia: 0%;
+    --saturation: 100%;
+    --hue-rotate: 0deg;
+}
+
+body {
+    font-family: 'Akaya Kanadaka', cursive;
+    font-size: 10px;
+    text-align: center;
+    background-color: var(--base);
+}
+
+h1 {
+    font-size: 4em;
+    margin: 30px 0;
+}
+.conrols-panel {
+    position: relative;
+    margin: 0 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 50px;
+    justify-items: center;
+    align-items: center;
+    z-index: 5;
+}
+
+.conrols-panel label {
+    display: block;
+    margin-bottom: 10px;
+    justify-self: center;
+    align-self: center;
+    font-size: 2em;
+}
+
+input {
+    max-width: 200px;
+}
+
+.color input {
+    width: 100px;
+}
+
+img {
+    border-radius: .5rem;
+    width: var(--spasing);
+
+    filter: blur(var(--blur))
+    invert(var(--invert))  
+    sepia(var(--sepia))
+    saturate(var(--saturation)) 
+    hue-rotate(var(--hue-rotate));
+    transform: rotate(var(--rotate));
+}
+
+@media(max-width: 1010px) {
+    h1 {
+        font-size: 3em;
+        margin: 20px 0;
+    }
+
+    .conrols-panel {
+        margin: 30px 0;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 30px;
+    }
+
+
+    .conrols-panel label {
+        font-size: 1.6em;
+    }
+
+    .color input {
+        width: 80px;
+    }
+}
+
+@media(max-width: 420px) {
+    :root {
+        --spasing: 50vw;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .conrols-panel {
+        margin: 30px 0;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 15px;
+    }
+
+
+
+    .color input {
+        width: 50px;
+    }
+}
